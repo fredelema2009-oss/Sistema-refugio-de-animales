@@ -64,4 +64,68 @@ public class Refugio {
             System.out.println("----------------------");
         }
     }
+     // Buscamos un animal por su ID y mostramos su informacion
+    public void buscarPorId(int idBuscado) {
+        System.out.println("\n--- BUSCAR ANIMAL POR ID: " + idBuscado + " ---");
+
+        // Recorremos la lista buscando el animal con ese ID
+        boolean encontrado = false;
+
+        for (Animal a : animales) {
+            if (a.getId() == idBuscado) {
+                // Mostramos la informacion del animal encontrado
+                a.mostrarInfo();
+                System.out.println("Sonido : " + a.hacerSonido());
+                encontrado = true;
+            }
+        }
+
+        // Informamos si no se encontro ningun animal con ese ID
+        if (encontrado == false) {
+            System.out.println("Animal no encontrado.");
+        }
+    }
+
+    // Cambiamos el estado de un animal buscandolo por ID
+    public void cambiarEstado(int idBuscado, String nuevoEstado) {
+        System.out.println("\n--- CAMBIAR ESTADO ---");
+
+        // Recorremos la lista buscando el animal con ese ID
+        boolean encontrado = false;
+
+        for (Animal a : animales) {
+            if (a.getId() == idBuscado) {
+                // Asignamos el nuevo estado al animal encontrado
+                a.setEstado(nuevoEstado);
+                System.out.println("Estado de " + a.getNombre() + " actualizado a: " + nuevoEstado);
+                encontrado = true;
+            }
+        }
+
+        // Informamos si no se encontro ningun animal con ese ID
+        if (encontrado == false) {
+            System.out.println("Animal no encontrado.");
+        }
+    }
+
+    // Ejecutamos el sonido de un animal buscandolo por ID
+    public void ejecutarSonido(int idBuscado) {
+        System.out.println("\n--- EJECUTAR SONIDO ---");
+
+        // Recorremos la lista buscando el animal con ese ID
+        boolean encontrado = false;
+
+        for (Animal a : animales) {
+            if (a.getId() == idBuscado) {
+                // Ejecutamos el sonido del objeto encontrado (polimorfismo)
+                System.out.println(a.getNombre() + " dice: " + a.hacerSonido());
+                encontrado = true;
+            }
+        }
+
+        // Informamos si no se encontro ningun animal con ese ID
+        if (encontrado == false) {
+            System.out.println("Animal no encontrado.");
+        }
+    }
 }
