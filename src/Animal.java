@@ -64,7 +64,7 @@ public class Animal {
     public void mostrarInfo() {
         System.out.println("ID     : " + id);
         System.out.println("Nombre : " + nombre);
-        System.out.println("Edad   : " + edad + " anio(s)");
+        System.out.println("Edad   : " + edad + " años");
         System.out.println("Tipo   : " + this.getClass().getSimpleName());
         System.out.println("Estado : " + estado);
     }

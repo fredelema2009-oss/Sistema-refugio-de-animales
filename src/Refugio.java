@@ -88,7 +88,7 @@ public class Refugio {
 
     // Cambiamos el estado de un animal buscandolo por ID
     public void cambiarEstado(int idBuscado, String nuevoEstado) {
-        System.out.println("\n--- CAMBIAR ESTADO ---");
+        System.out.println("--- CAMBIAR ESTADO ---");
 
         // Recorremos la lista buscando el animal con ese ID
         boolean encontrado = false;
