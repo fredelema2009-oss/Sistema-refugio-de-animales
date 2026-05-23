@@ -35,4 +35,42 @@ public class Animal {
         this.estado = estado;
     }
 
+    // Retornamos el id del animal
+    public int getId() {
+        return id;
+    }
+
+    // Retornamos el nombre del animal
+    public String getNombre() {
+        return nombre;
+    }
+
+    // Retornamos la edad del animal
+    public int getEdad() {
+        return edad;
+    }
+
+    // Retornamos el estado del animal
+    public String getEstado() {
+        return estado;
+    }
+
+    // Asignamos un nuevo estado al animal
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    // Mostramos la informacion general del animal en consola
+    public void mostrarInfo() {
+        System.out.println("ID     : " + id);
+        System.out.println("Nombre : " + nombre);
+        System.out.println("Edad   : " + edad + " anio(s)");
+        System.out.println("Tipo   : " + this.getClass().getSimpleName());
+        System.out.println("Estado : " + estado);
+    }
+
+    // Retornamos un sonido generico, las subclases lo sobreescriben
+    public String hacerSonido() {
+        return "...";
+    }
 }
